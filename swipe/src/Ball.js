@@ -4,6 +4,7 @@ import { View, Animated } from 'react-native';
 class Ball extends Component {
   componentWillMount() {
     this.position = new Animated.ValueXY(0, 0);
+    // Spring is being used to change the current position
     Animated.spring(this.position, {
       toValue: { x: 200, y: 500 }
     }).start();
